@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: ai-ppt-studio
+    env: python
+    buildCommand: pip install -r requirements_cloud.txt
+    startCommand: gunicorn app_cloud:app
+    plan: free

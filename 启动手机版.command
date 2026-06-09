@@ -1,35 +1,30 @@
 #!/bin/bash
 cd "$(dirname "$0")"
 
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "  📱 AI PPT 工作室 — 手机版"
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 
-# 防止电脑休眠（合盖也能跑）
+# 防休眠
 caffeinate -i &
-CAFFEINE=$!
-echo "✅ 电脑不会休眠"
+CAFF=$!
 
-# 启动服务
+# 启动 Flask
 python3 app.py &
-FLASK=$!
 sleep 2
 
-# 获取本机 IP
-IP=$(ifconfig | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}' | head -1)
+# 公网隧道
+echo "⏳ 生成公网链接..."
+npx localtunnel --port 7890 2>&1 | while read line; do
+  if echo "$line" | grep -q "your url is:"; then
+    URL=$(echo "$line" | grep -o 'https://[^ ]*\.loca\.lt')
+    echo ""
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "  ✅ 手机打开（微信可开）:"
+    echo "  $URL"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  fi
+done
 
-echo ""
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "  📱 手机浏览器打开:"
-echo "  http://$IP:7890"
-echo ""
-echo "  （手机和电脑需在同一WiFi）"
-echo ""
-echo "  关闭此窗口停止服务"
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo ""
-
-# 保持运行
-wait $FLASK
-kill $CAFFEINE 2>/dev/null
+kill $CAFF 2>/dev/null
