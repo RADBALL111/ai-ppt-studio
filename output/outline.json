@@ -1,0 +1,113 @@
+{
+  "topic": "测试",
+  "outline": {
+    "topic": "测试",
+    "template": "冲击反转",
+    "angle": "从常识误区切入，揭示数据背后的反直觉真相",
+    "target_audience": "大众用户",
+    "tone": "冲击",
+    "hook": "你以为的常识，其实是错的",
+    "closing": "真相，往往藏在数据背后",
+    "outline": [
+      {
+        "section": "反常识现象",
+        "key_message": "大多数人都错了",
+        "bullet_points": [
+          "测试中常见错误认知",
+          "数据颠覆直觉"
+        ],
+        "suggested_visual": "surprising statistics"
+      },
+      {
+        "section": "数据揭示真相",
+        "key_message": "数据不会说谎",
+        "bullet_points": [
+          "核心数据对比",
+          "趋势分析"
+        ],
+        "suggested_visual": "data chart comparison"
+      },
+      {
+        "section": "原因分析",
+        "key_message": "为什么我们会错",
+        "bullet_points": [
+          "认知偏差",
+          "信息茧房"
+        ],
+        "suggested_visual": "cognitive bias illustration"
+      },
+      {
+        "section": "新视角",
+        "key_message": "换个角度看问题",
+        "bullet_points": [
+          "重新定义测试",
+          "抓住本质"
+        ],
+        "suggested_visual": "different perspective"
+      },
+      {
+        "section": "行动建议",
+        "key_message": "如何做出改变",
+        "bullet_points": [
+          "三步法",
+          "日常实践"
+        ],
+        "suggested_visual": "action steps"
+      },
+      {
+        "section": "总结金句",
+        "key_message": "记住这个道理",
+        "bullet_points": [
+          "测试不是终点",
+          "而是起点"
+        ],
+        "suggested_visual": "inspirational quote"
+      }
+    ],
+    "estimated_pages": 6
+  },
+  "storyboard": [
+    {
+      "layout": "hero",
+      "rhythm": "hero",
+      "title": "你以为的常识",
+      "subtitle": "其实是错的",
+      "highlight": "反直觉"
+    },
+    {
+      "layout": "kpi_bold",
+      "rhythm": "non-hero",
+      "title": "大多数人错了",
+      "subtitle": "测试中常见错误认知颠覆直觉",
+      "highlight": "80%错误"
+    },
+    {
+      "layout": "split_col",
+      "rhythm": "hero",
+      "title": "数据不会说谎",
+      "subtitle": "核心对比与趋势揭示真相",
+      "highlight": "真相"
+    },
+    {
+      "layout": "quote_slide",
+      "rhythm": "non-hero",
+      "title": "认知偏差",
+      "subtitle": "信息茧房让我们误判",
+      "highlight": "偏差"
+    },
+    {
+      "layout": "hero",
+      "rhythm": "hero",
+      "title": "换个角度",
+      "subtitle": "重新定义测试，抓住本质",
+      "highlight": "新视角"
+    },
+    {
+      "layout": "statement",
+      "rhythm": "non-hero",
+      "title": "三步法改变",
+      "subtitle": "日常实践，从测试开始",
+      "highlight": "行动"
+    }
+  ]
+}

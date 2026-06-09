@@ -1,0 +1,9 @@
+flask
+gunicorn
+requests
+edge-tts
+python-pptx
+pydub
+numpy
+opencv-python
+moviepy
