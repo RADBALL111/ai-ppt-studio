@@ -3,5 +3,10 @@ services:
     name: ai-ppt-studio
     env: python
     buildCommand: pip install -r requirements_cloud.txt
-    startCommand: gunicorn app_cloud:app
+    startCommand: gunicorn app_cloud:app --bind 0.0.0.0:$PORT --timeout 300
     plan: free
+    envVars:
+      - key: DS_KEY
+        value: sk-0721fec4e1b340d48c96536a88485438
+      - key: PEXELS_KEY
+        value: VlyYFOLtfcXqP75twwPFha3lwrCeXxwBz3dWyEQoPvsaPJpyUIGB8Dv9
